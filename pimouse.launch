@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="pimouse_ros" name="buzzer" type="buzzer.py" require="true" />
+  <node pkg="pimouse_ros" name="lightsensors" type="lightsensors.py" require="true" />
+  <node pkg="pimouse_ros" name="motors" type="motors.py" require="true" />
+</launch>
