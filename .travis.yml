@@ -1,5 +1,7 @@
 sudo: required
 dist: bionic
+language: python
+cache: pip
 
 install:
   - bash -xve ./test/travis_ros_install.bash
