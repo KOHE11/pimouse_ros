@@ -1,9 +1,12 @@
 sudo: required
 dist: bionic
 
-script:
+install:
   - bash -xve ./test/travis_ros_install.bash
   - source ~/catkin_ws/devel/setup.bash
   - bash -xve ./test/travis_package_make.bash
-  - bash -xve .t/est/travis_prepare_dummy_files.bash
+  - source ~/catkin_ws/devel/setup.bash
+  - bash -xve ./test/travis_prepare_dummy_files.bash
+
+ script:
   - rostest pimouse_ros test.launch
